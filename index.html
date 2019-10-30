@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="icon.png">
+
+    <link rel="stylesheet" href = "style.css"> <!-- Estilo principal do site - Salvo no server -->
+
+    <script src="jquery.js"></script> <!-- JQUERY - Salvo no server -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script> <!-- Socket.io  - Com cdn -->
+    <script src="script.js"></script> <!-- Codigo JS da aplicação Front end - Salvo no server -->
+
+    <title>Chat</title>
+  </head>
+
+  <body>
+
+    <!-- Tela de inicio - Perguntando nome (Substituir por login e cadastro) -->
+    <div class="nickname_container" id="nick">
+
+      <span>Qual seu nome?</span>
+
+      <form id="submit">
+        <input type="text" id="nickname" maxlength="20"/>
+      </form>
+
+    </div>
+
+    <!-- Corpo do chat -->
+    <div id="chat" hidden>
+      
+      <!-- Head da pagina-->
+      <div class="menu">
+        <div class="name" id="name"></div>
+        <div class="alert"></div>
+        <div class="last" id="time"></div>
+      </div>
+      
+      <!-- Aqui seram adicionadas as mensagens -->
+      <ol class="chat"></ol>
+
+      <!-- Usado para sempre manter a ultima mensagem visivel -->
+      <div id='bottom'></div>
+
+      <!-- Caixa de mensagens -->
+      <input class="textarea" type="text" placeholder="Sua mensagem" id="textarea"/>
+      
+    </div>
+  </body>
+
+</html>
