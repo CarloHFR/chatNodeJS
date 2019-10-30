@@ -4,7 +4,7 @@
 $(document).ready(function()
 {  
 	// Conectando com o socket.io (As paginas são servidas na porta 3000 e o socket na porta 4000)
-    var socket = io.connect("http://localhost:4000");
+    var socket = io.connect('localhost:8080');
 	var ready = false;
 	
 	// Faz o fade das mesnagens do servidor
