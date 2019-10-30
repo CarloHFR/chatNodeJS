@@ -5,7 +5,7 @@ const http = require('http');
 const express = require("express");
 
 // Modulo Socket.io - Permite a comunicação entre os usuarios por um chat real time (As paginas são servidas na porta 3000 e o socket na porta 4000)
-const io = require('socket.io')(4000);
+const io = require('socket.io')(http);
 
 // Modulo fs - Permite a leitura das paginas html para envio ao usuario
 const fs = require('fs');
