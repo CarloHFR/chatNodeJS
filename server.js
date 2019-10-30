@@ -1,17 +1,23 @@
+var app = require('express')();
+
 // Modulo http - Permite a utilização do protocolo http
-const http = require('http');
+var http = require('http').Server(app);
+
+var io = require('socket.io')(http);
+
+
 
 // Modulo express - Simplifica a criação e configuração do servidor
 const express = require("express");
 
 // Modulo Socket.io - Permite a comunicação entre os usuarios por um chat real time (As paginas são servidas na porta 3000 e o socket na porta 4000)
-const io = require('socket.io')(http);
+//const io = require('socket.io')(http);
 
 // Modulo fs - Permite a leitura das paginas html para envio ao usuario
 const fs = require('fs');
 
 // Usando a função express pelo nome "app"
-const app = express();
+//const app = express();
 
 //Permite tornar todos os arquivos dentro da pasta public acessiveis a todo o site
 app.use(express.static('public'));
