@@ -1,11 +1,15 @@
-var app = require('express')();
+//var app = require('express')();
 
 // Modulo http - Permite a utilização do protocolo http
-var http = require('http').Server(app);
+//var http = require('http').Server(app);
 
-var io = require('socket.io')(http);
+//var io = require('socket.io')(http);
 
+var app = express()
+var server = require('http').createServer(app)
+var io = io.listen(server);
 
+server.listen(80);
 
 // Modulo express - Simplifica a criação e configuração do servidor
 const express = require("express");
